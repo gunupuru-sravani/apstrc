@@ -1,0 +1,73 @@
+SQL> create table apsrtc(serviceno number(5) primary key,
+  2  sertype varchar2(10),
+  3  place varchar2(10),
+  4  kms number(10),
+  5  ticketprice number(10));
+
+Table created.
+
+SQL> insert into apsrtc values(2109,'luxury','kkd',409,350);
+
+1 row created.
+
+SQL> insert into apsrtc values(5343,'express','peedapuram',454,360);
+
+1 row created.
+
+SQL> insert into apsrtc values(5243,'express','samarlakotta',676,432);
+insert into apsrtc values(5243,'express','samarlakotta',676,432)
+                                         *
+ERROR at line 1:
+ORA-12899: value too large for column "DIVYA"."APSRTC"."PLACE" (actual: 12,
+maximum: 10)
+
+
+SQL>
+SQL> insert into apsrtc values(9870,'express','vizag',870,674);
+
+1 row created.
+
+SQL> insert into apsrtc values(9843,'passenger','anapathi',890,765);
+
+1 row created.
+
+SQL> insert into apsrtc values(6783,'passenger','dhuvada',900,645);
+
+1 row created.
+
+SQL> insert into apsrtc values(6252,'passenger','tuni',567,866);
+
+1 row created.
+
+SQL> insert into apsrtc values(5432,'luxury','anakapali',432,786);
+
+1 row created.
+
+SQL> insert into apsrtc values(5632,'luxury','regupalm',231,362);
+
+1 row created.
+
+SQL> insert into apsrtc values(6533,'express','gullupadu',567,635);
+
+1 row created.
+
+SQL> insert into apsrtc values(4323,'express','gollaprolu',698,654);
+
+1 row created.
+
+SQL> select *from apsrtc;
+
+ SERVICENO SERTYPE    PLACE             KMS TICKETPRICE
+---------- ---------- ---------- ---------- -----------
+      2109 luxury     kkd               409         350
+      5343 express    peedapuram        454         360
+      9870 express    vizag             870         674
+      9843 passenger  anapathi          890         765
+      6783 passenger  dhuvada           900         645
+      6252 passenger  tuni              567         866
+      5432 luxury     anakapali         432         786
+      5632 luxury     regupalm          231         362
+      6533 express    gullupadu         567         635
+      4323 express    gollaprolu        698         654
+
+10 rows selected.
